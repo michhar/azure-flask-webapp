@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>eb4234cf-cc56-40ca-834b-c47dac0c982e</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <StaticUriPattern>^/static/.*</StaticUriPattern>
+    <StaticUriRewrite>^/$(MSBuildProjectName)/static/.*</StaticUriRewrite>
+    <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
+    <Name>DocDB-Flask-WebApp</Name>
+    <RootNamespace>FlaskWebProject1</RootNamespace>
+    <InterpreterId>{1add6d19-e7af-4063-a6e7-dda04139639f}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="docdbapp\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="runserver.py" />
+    <Compile Include="docdbapp\__init__.py" />
+    <Compile Include="docdbapp\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docdbapp\" />
+    <Folder Include="docdbapp\static\" />
+    <Folder Include="docdbapp\static\content\" />
+    <Folder Include="docdbapp\static\fonts\" />
+    <Folder Include="docdbapp\static\scripts\" />
+    <Folder Include="docdbapp\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docdbapp\templates\collaborate.html" />
+    <Content Include="docdbapp\templates\create.html" />
+    <Content Include="docdbapp\templates\error_page.html" />
+    <Content Include="docdbapp\templates\pickdoc.html" />
+    <Content Include="docdbapp\templates\publish.html" />
+    <Content Include="docdbapp\templates\results.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="docdbapp\static\content\bootstrap.css" />
+    <Content Include="docdbapp\static\content\bootstrap.min.css" />
+    <Content Include="docdbapp\static\content\site.css" />
+    <Content Include="docdbapp\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="docdbapp\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="docdbapp\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="docdbapp\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="docdbapp\static\scripts\bootstrap.js" />
+    <Content Include="docdbapp\static\scripts\bootstrap.min.js" />
+    <Content Include="docdbapp\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="docdbapp\static\scripts\jquery-1.10.2.js" />
+    <Content Include="docdbapp\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="docdbapp\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="docdbapp\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="docdbapp\static\scripts\jquery.validate.js" />
+    <Content Include="docdbapp\static\scripts\jquery.validate.min.js" />
+    <Content Include="docdbapp\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="docdbapp\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="docdbapp\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="docdbapp\static\scripts\respond.js" />
+    <Content Include="docdbapp\static\scripts\respond.min.js" />
+    <Content Include="docdbapp\static\scripts\_references.js" />
+    <Content Include="docdbapp\templates\about.html" />
+    <Content Include="docdbapp\templates\contact.html" />
+    <Content Include="docdbapp\templates\index.html" />
+    <Content Include="docdbapp\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{1add6d19-e7af-4063-a6e7-dda04139639f}\2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,9 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<h2>Enter Your Information Here to Add Your Spreadsheet to Collaboration</h2>
+<form action="" method="post" name="collaborate">
+    {{form.hidden_tag()}}
+    <button class="btn btn-primary" type="submit">Publish</button>
+    <p>This may take a minute or two.</p>
+</form>
+{% endblock %}

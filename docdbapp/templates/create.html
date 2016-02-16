@@ -1,0 +1,6 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<p><a href="{{ url_for('.vote') }}" class="btn btn-primary btn-large">Vote &raquo;</a></p>
+{% endblock %}

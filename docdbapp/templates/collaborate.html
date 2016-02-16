@@ -1,0 +1,19 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<h2>Enter Your Information Here to Add Your Spreadsheet to Collaboration</h2>
+<form action="" method="post" name="collaborate" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+    <dl>
+        <dt>Your gmail address (\<name\>@gmail.com):
+        <dd>{{ form.email }}
+        <dt>OAuth Creditentials file (this is not saved):
+        <dd>{{ form.credfile }}
+        <dt>Document Name:
+        <dd>{{ form.docname }}
+</dl>
+    <button class="btn btn-primary" type="submit">Add</button>
+    <p>This may take a minute or two.</p>
+</form>
+Ensure that you have followed these instructions <a href="http://gspread.readthedocs.org/en/latest/oauth2.html">here</a>
+for creating credentials to associate with a google drive account.
+{% endblock %}

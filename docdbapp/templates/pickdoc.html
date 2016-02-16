@@ -1,0 +1,16 @@
+﻿{% extends "layout.html" %}
+{% block title %}Create Post{% endblock %}
+{% block content %}
+<H3>Create/Edit Post</H3>
+<form action="" method=post>
+    {{form.hidden_tag()}}
+    <dl>
+        <dt>Title:
+        <dd>{{ form.title }}
+        <dt>Post:
+        <dd>{{ form.body(cols="35", rows="20") }}}
+    </dl>
+    <p>
+        <input type=submit value="Publish">
+</form>
+{% endblock %}
